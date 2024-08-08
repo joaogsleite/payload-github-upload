@@ -1,0 +1,41 @@
+{
+  "name": "payload-github-upload",
+  "version": "0.0.1",
+  "description": "Send Payload CMS uploads to GitHub repo",
+  "keywords": [
+    "storage",
+    "github",
+    "payload",
+    "payloadcms",
+    "payload-cms",
+    "payloadplugin",
+    "payload-plugin"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "joaogsleite",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaogsleite/payload-github-upload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaogsleite/payload-github-upload/issues"
+  },
+  "homepage": "https://github.com/joaogsleite/payload-github-upload#readme",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "payload": "^1.x.x"
+  },
+  "devDependencies": {
+    "payload": "^1.8.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
