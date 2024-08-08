@@ -6,7 +6,7 @@ import { GithubUploadCollectionConfig, File, IPluginConfig } from './types'
 function randomFilename(originalFilename: string) {
   const key = Math.random().toString(36).slice(2)
   const ext = path.extname(originalFilename)
-  return `${key}.${ext}`
+  return `${key}${ext}`
 }
 
 const getFilesToUpload = ({

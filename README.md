@@ -35,7 +35,7 @@ export default buildConfig({
 ### Configure your upload collections 
 
 ```js
-import { UploadCollectionConfig } from 'payload-github-upload'
+import { GithubUploadCollectionConfig } from 'payload-github-upload'
 
 const Media: GithubUploadCollectionConfig = {
   slug: 'media',
