@@ -1,6 +1,6 @@
 {
   "name": "payload-github-upload",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Send Payload CMS uploads to GitHub repo",
   "keywords": [
     "storage",
@@ -31,7 +31,7 @@
   "dependencies": {
   },
   "peerDependencies": {
-    "payload": "^3.x.x"
+    "payload": "^3.0.0-0"
   },
   "devDependencies": {
     "payload": "^1.8.2",
