@@ -6,7 +6,6 @@ export type IPluginConfig = {
   repo: string
   branch: string
   token: string
-  endpoint?: string
 }
 
 export type GithubIncomingUploadType = {

@@ -1,11 +1,19 @@
-import type { Config, Plugin } from 'payload/config'
+import type { Plugin } from 'payload/config'
 
 import buildUploadHook from './buildUploadHook'
 import buildDeleteHook from './buildDeleteHook'
-import buildGetEndpoint from './buildGetEndpoint'
 import { IPluginConfig, GithubUploadCollectionConfig } from './types'
 
+
+let PLUGIN_OPTIONS: IPluginConfig
+
+export function getPluginOptions() {
+  return PLUGIN_OPTIONS
+}
+
 const pluginPayloadGithubUpload = (pluginOptions?: IPluginConfig): Plugin => {
+
+  PLUGIN_OPTIONS = pluginOptions
   
   return (payloadConfig) => {
     const uploadCollections = payloadConfig.collections.filter(
@@ -22,10 +30,6 @@ const pluginPayloadGithubUpload = (pluginOptions?: IPluginConfig): Plugin => {
       // comply with payload strict checking
       delete collection.upload.github
     })
-    payloadConfig.endpoints = [
-      ...(payloadConfig.endpoints || []),
-     buildGetEndpoint(pluginOptions),
-    ]
     return payloadConfig
   }
 }
