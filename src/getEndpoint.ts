@@ -2,7 +2,9 @@ import { getPluginOptions } from './plugin'
 
 export const GET = async (_: any, { params: { filename } }: { params: { filename: string } }) => {
   
-  const { repo, branch, token } = getPluginOptions()
+  const pluginOptions = getPluginOptions()
+  if (!pluginOptions) return Response.json({}, { status: 500 });
+  const { repo, branch, token } = pluginOptions
   if (!repo || !branch || !token) return Response.json({}, { status: 500 });
   
   const baseUrl = `https://raw.githubusercontent.com/${repo}/${branch}`

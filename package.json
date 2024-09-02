@@ -1,6 +1,6 @@
 {
   "name": "payload-github-upload",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Send Payload CMS uploads to GitHub repo",
   "keywords": [
     "storage",
