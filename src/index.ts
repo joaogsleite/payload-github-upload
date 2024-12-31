@@ -1,4 +1,5 @@
 import plugin from './plugin'
-export { GET } from './getEndpoint'
+import getEndpoint from './getEndpoint'
+export const GET: any = getEndpoint
 export * from './types'
 export default plugin

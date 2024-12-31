@@ -1,6 +1,6 @@
 import { getPluginOptions } from './plugin'
 
-export const GET = async (_: any, { params: { filename } }: { params: { filename: string } }) => {
+export default async function(_: any, { params: { filename } }: { params: { filename: string } }) {
   
   const pluginOptions = getPluginOptions()
   if (!pluginOptions) return Response.json({}, { status: 500 });
